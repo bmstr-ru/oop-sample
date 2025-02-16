@@ -17,7 +17,7 @@ public class Main {
         acc3.plus(new MonetaryAmount(365, "EUR"), "Vasya");
 
         for (Account acc : accounts) {
-            System.out.println(acc.value + " " + acc.currency);
+            System.out.println(acc);
         }
     }
 
