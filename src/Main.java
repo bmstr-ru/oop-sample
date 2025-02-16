@@ -11,9 +11,10 @@ public class Main {
 
         Account[] accounts = new Account[]{acc1, acc2, acc3};
 
-        acc1.plus(50_000, "Vasya");
-        acc2.minus(5_000, "Petya");
-        acc3.plus(700, "Vasya");
+        acc1.plus(new MonetaryAmount(50_000, "RUB"), "Vasya");
+        acc2.minus(new MonetaryAmount(5_000, "EUR"), "Petya");
+        acc3.plus(new MonetaryAmount(700, "USD"), "Vasya");
+        acc3.plus(new MonetaryAmount(365, "EUR"), "Vasya");
 
         for (Account acc : accounts) {
             System.out.println(acc.value + " " + acc.currency);
